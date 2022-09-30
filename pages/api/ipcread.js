@@ -1,0 +1,3 @@
+export default function Ipcread(req, res) {
+    res.status(200).json('#include <sys/ipc. H> #include <sys/shm. H> #include <stdio. H> int main() { printf(" ipc reader\n"); printf(" ============\n"); key_t key = ftok("shmfile", 65); int shmid = shmget(key, 1024, 0666 | ipc_creat); char *str = (char *)shmat(shmid, (void *)0, 0); printf("data read from memory: %s\n", str); shmdt(str); shmctl(shmid, ipc_rmid, null); return 0; }')
+  }  

@@ -1,0 +1,3 @@
+export default function Syscall1(req, res) {
+    res.status(200).json('#include <stdio. H> #include <string. H> #include <sys/types. H> #include <unistd. H> void main() { pid_t pid; pid = fork(); if (pid == -1) printf("error in creating process\n"); else if (pid == 0) { printf("executing in child process\n"); printf("child process pid= %d\n", getpid()); printf("parent process pid= %d\n", getppid()); } else printf("executing in parent process, pid= %d\n", getppid()); }')
+  }  

@@ -1,0 +1,3 @@
+export default function Syscall3(req, res) {
+    res.status(200).json('#include <unistd. H> #include <sys/types. H> #include <sys/stat. H> #include <fcntl. H> #include <stdlib. H> #include <stdio. H> int main(int argc, char *argv[]) { int fd; int n_char = 0; char buffer[10]; fd = open(argv[1], o_rdonly); if (fd == -1) { printf("file open error\n"); exit(1); } while ((n_char = read(fd, buffer, 1)) ! = 0) n_char = write(1, buffer, n_char); close(fd); return 0; }')
+  }  

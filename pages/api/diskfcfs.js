@@ -1,0 +1,3 @@
+export default function Diskfcfs(req, res) {
+    res.status(200).json('#include <stdio. H> #include <stdlib. H> int main() { int rq[100], i, n, totalheadmovt = 0, initial; printf(" fcfs disk scheduling\n"); printf(" ======================\n"); printf("enter the number of requests : "); scanf("%d", &n); printf("enter the request sequence\n"); for (i = 0; i < n; i++) scanf("%d", &rq[i]); printf("enter the initial head position : "); scanf("%d", &initial); for (i = 0; i < n; i++) { totalheadmovt = totalheadmovt + abs(rq[i] - initial); initial = rq[i]; } printf("total head movement is %d\n", totalheadmovt); }')
+  }  

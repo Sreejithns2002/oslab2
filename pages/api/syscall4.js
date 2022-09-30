@@ -1,0 +1,3 @@
+export default function Syscall4(req, res) {
+    res.status(200).json('#include <unistd. H> #include <stdio. H> #include <sys/stat. H> #include <sys/types. H> void main(int argc, char **argv) { if (argc ! = 2) printf("usage error: invalid number of arguments\n"); struct stat fs; if (stat(argv[1], &fs) < 0) printf("usage error: file/dir not found\n"); printf("information of %s\n", argv[1]); printf("file size: \t\t%d bytes\n", fs. St_size); printf("file inode: \t\t%d\n", fs. St_ino); printf("file mode: \t\t%d\n", fs. St_mode); printf("user id of file owner: \t%d\n", fs. St_uid); printf("file last access time: \t%d\n", fs. St_atime); }')
+  }  
